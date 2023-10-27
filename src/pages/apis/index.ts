@@ -1,4 +1,4 @@
-import { SignUpInput } from '@/types'
+import { LoginInputType, SignUpInput } from '@/types'
 
 export class ApiService {
   baseUrl: string;
@@ -18,14 +18,13 @@ export class ApiService {
     }
   }
 
-   async Users(endpoint: string, payload: SignUpInput): Promise<any> {
+   async Users(endpoint: string, payload: SignUpInput|LoginInputType): Promise<any> {
         try {
             const response = await fetch(`${this.baseUrl}/${endpoint}`, {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(payload),
             });
-            console.log(response)
 
             return await response.json();
         } catch (err) {
