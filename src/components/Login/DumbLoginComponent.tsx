@@ -3,8 +3,9 @@ import { Field, Form } from 'react-final-form'
 import { SIGN_UP_CONFIGS } from '@/InputConfigs'
 import type { FC } from 'react'
 import { LoginProp } from '@/types'
+import { Button } from '@/components/Home/style.home'
 
-const DumbLoginComponent: FC<LoginProp> = ({onSubmit}) => (
+const DumbLoginComponent: FC<LoginProp> = ({onSubmit, handleRouter}) => (
     <SignUpContainer>
         <SignUpForm>
             <Form
@@ -24,6 +25,7 @@ const DumbLoginComponent: FC<LoginProp> = ({onSubmit}) => (
                     </form>
                 )}
             />
+            <Button onClick={() => handleRouter('/mobile')}>Go To Main page</Button>
         </SignUpForm>
     </SignUpContainer>
 )

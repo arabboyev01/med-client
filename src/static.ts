@@ -12,3 +12,16 @@ export const BUTTONS_DATA: BUTTONS_DATA_TYPES[] = [
         route: '/mobile'
     }
 ]
+
+export const BUTTON_ROUTE: BUTTONS_DATA_TYPES[] = [
+    {
+        id: 1,
+        name: 'Login',
+        route: '/login'
+    },
+    {
+        id: 2,
+        name: 'Sign Up',
+        route: '/sign-up'
+    }
+]

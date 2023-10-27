@@ -1,9 +1,11 @@
 import DumbSignUpComponent from '@/components/SignUp/DumbSignUpComponent'
 import { SignUpInput } from '@/types'
 import { api } from '@/config'
+import { useRouter } from 'next/router'
 
 const SignUp = () => {
 
+    const router = useRouter()
     const onSubmit = (values: SignUpInput) => {
         api.Users('api/sign-up', values)
             .then((data: SignUpInput) => {
@@ -13,7 +15,9 @@ const SignUp = () => {
             .catch(err => console.log(err))
     }
 
-    return <DumbSignUpComponent onSubmit={onSubmit}/>
+    const handleRouter = (route: string) => router.push(route)
+
+    return <DumbSignUpComponent onSubmit={onSubmit} handleRouter={handleRouter}/>
 }
 
 export default SignUp

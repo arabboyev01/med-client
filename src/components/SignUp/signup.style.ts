@@ -5,6 +5,10 @@ export const SignUpContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  
+  @media(max-width: 430px){
+    margin: 0 20px;
+  }
 `;
 
 export const SignUpForm = styled.div`
