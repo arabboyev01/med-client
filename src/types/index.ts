@@ -16,3 +16,9 @@ export interface SignUpProp {
 export interface LoginProp {
     onSubmit: (values: LoginInputType) => void
 }
+
+export interface BUTTONS_DATA_TYPES {
+    id: number
+    name: string
+    route: string
+}
