@@ -28,4 +28,5 @@ export const StartButton = styled.div`
   border-radius: 50%;
    background-color: #0070f3;
   color: white;
+  cursor: pointer;
 `

@@ -1,5 +1,5 @@
 import { BUTTONS_DATA_TYPES } from '@/types'
-
+import { GridColDef } from '@mui/x-data-grid';
 export const BUTTONS_DATA: BUTTONS_DATA_TYPES[] = [
     {
         id: 1,
@@ -25,3 +25,24 @@ export const BUTTON_ROUTE: BUTTONS_DATA_TYPES[] = [
         route: '/sign-up'
     }
 ]
+
+export const columns: GridColDef[] = [
+  { field: 'id', headerName: 'ID', width: 90 },
+  {
+    field: 'fullName',
+    headerName: 'Full name',
+    width: 150,
+    editable: true,
+  },
+  {
+    field: 'username',
+    headerName: 'Username',
+    width: 150,
+    editable: true,
+  },
+    {
+        field: 'address',
+        headerName: 'Address',
+        width: 160,
+    }
+];

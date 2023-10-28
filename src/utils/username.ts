@@ -1,0 +1,1 @@
+export const username = typeof window !== 'undefined' ? window.localStorage.getItem('username') : null

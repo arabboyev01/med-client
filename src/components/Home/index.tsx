@@ -1,11 +1,10 @@
 import { Button, Buttons, StyleHome } from '@/components/Home/style.home'
 import { BUTTONS_DATA } from '@/static'
-import { useRouter } from 'next/router'
 import { BUTTONS_DATA_TYPES } from '@/types'
+import { Router } from '@/utils/router'
 
 const HomeComponent = () => {
-    const router = useRouter()
-    const handleRouter = (route: string) => router.push(route)
+    const { handleRouter } = Router()
 
     return (
         <StyleHome>

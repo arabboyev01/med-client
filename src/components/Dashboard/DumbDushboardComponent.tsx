@@ -1,8 +1,11 @@
 import { StyleDashboard } from '@/components/Dashboard/style.dashboard'
+import type { FC } from 'react'
+import { DataProps } from '@/types'
+import FetchDataAndRenderGrid from '@/utils/FetchDataGrid'
 
-const DumbDashboardComponent = () => (
+const DumbDashboardComponent: FC<DataProps> = ({data}) => (
     <StyleDashboard>
-        <h1>Dashboard</h1>
+        <FetchDataAndRenderGrid originalData={data}/>
     </StyleDashboard>
 )
 
