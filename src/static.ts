@@ -31,18 +31,18 @@ export const columns: GridColDef[] = [
   {
     field: 'fullName',
     headerName: 'Full name',
-    width: 150,
+    width: 400,
     editable: true,
   },
   {
     field: 'username',
     headerName: 'Username',
-    width: 150,
+    width: 400,
     editable: true,
   },
     {
         field: 'address',
         headerName: 'Address',
-        width: 160,
+        width: 400,
     }
 ];
